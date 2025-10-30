@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Security &amp; Trust Policy | DomainConnectHub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="How DomainConnectHub protects your data, domains, and connections. SSL, CSP, privacy compliance, and secure infrastructure." />
+
+  <!-- Minimal fallback styles (safe to remove if Tailwind or your global CSS is loaded) -->
+  <style>
+    :root{
+      --primary:#E63946; --primaryDark:#C72C41; --grayLight:#F5F5F5; --grayDark:#333333;
+      --border:#e6e6e6;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6;color:var(--grayDark);background:#fff}
+    header,main,footer{display:block}
+    .wrap{max-width:960px;margin:0 auto;padding:28px}
+    .hero{background:var(--grayLight);border-bottom:1px solid var(--border)}
+    h1{font-size:2.2rem;line-height:1.2;margin:.25rem 0 0}
+    h2{font-size:1.35rem;margin:24px 0 12px}
+    p{margin:.5rem 0 1rem}
+    .badge{display:inline-block;background:var(--primary);color:#fff;font-weight:700;border-radius:999px;padding:.25rem .75rem;margin-right:.5rem}
+    .meta{color:#666}
+    .card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:18px;margin:16px 0}
+    .muted{color:#666}
+    .list{padding-left:1.25rem;margin:.25rem 0 1rem}
+    .table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+    .table th,.table td{padding:12px 14px;border-bottom:1px solid var(--border);text-align:left;font-size:.96rem}
+    .table th{background:var(--grayLight);font-weight:700}
+    .callout{border-left:4px solid var(--primary);background:#fff7f8;padding:14px 16px;border-radius:8px;margin:16px 0}
+    .cta{display:inline-block;background:var(--primary);color:#fff;text-decoration:none;font-weight:700;padding:12px 18px;border-radius:10px}
+    .grid{display:grid;gap:14px}
+    @media (min-width:720px){.grid-2{grid-template-columns:1fr 1fr}}
+    footer{border-top:1px solid var(--border);background:var(--grayLight);color:#555}
+    a{color:var(--primary);text-decoration:none}
+    a:hover{color:var(--primaryDark);text-decoration:underline}
+    code{background:#f3f3f3;padding:2px 6px;border-radius:6px;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="badge">Security</span>
+      <h1>DomainConnectHub Security &amp; Trust Policy</h1>
+      <p class="meta">Last updated: October 2025</p>
+      <p>Security isn’t an afterthought — it’s built into every part of our platform. When you connect your domain with us, you’re trusting us with your online identity. Here’s exactly how we protect your data, domains, and connections.</p>
+    </div>
+  </section>
+
+  <main class="wrap">
+
+    <!-- 1. SSL / HTTPS -->
+    <section class="card" id="ssl">
+      <h2>🔒 Encrypted Connections (SSL / HTTPS)</h2>
+      <p>All traffic is protected with <strong>HTTPS (TLS&nbsp;1.3)</strong>. Every interaction — sign-ups, domain checks, and form submissions — is encrypted in transit.</p>
+      <div class="callout"><strong>Tip:</strong> You’ll always see a lock icon in your browser when using DomainConnectHub.</div>
+    </section>
+
+    <!-- 2. No sensitive data stored -->
+    <section class="card" id="data-min">
+      <h2>🧠 Minimal &amp; Secure Data</h2>
+      <p>We do <strong>not</strong> store registrar passwords or DNS credentials. When needed, we use temporary tokens and read-only access. Any personal data (like your email) is stored securely, used only for service delivery, and deleted upon request.</p>
+    </section>
+
+    <!-- 3. API keys -->
+    <section class="card" id="api-keys">
+      <h2>🔑 API Key &amp; Environment Security</h2>
+      <p>Service keys are stored in encrypted environment variables on our servers — never in front-end code or public repositories. We follow <em>least-privilege</em> access across services.</p>
+    </section>
+
+    <!-- 4. Privacy -->
+    <section class="card" id="privacy">
+      <h2>🧾 Data Privacy &amp; Compliance</h2>
+      <p>We are committed to privacy best practices and comply with <strong>GDPR</strong>, <strong>CCPA</strong>, and <strong>CAN-SPAM</strong>. You can request data export or deletion any time.</p>
+      <p>Contact our privacy team: <a href="mailto:privacy@domainconnecthub.com">privacy@domainconnecthub.com</a></p>
+    </section>
+
+    <!-- 5. DNS & domain -->
+    <section class="card" id="dns-security">
+      <h2>⚙️ DNS &amp; Domain Security</h2>
+      <ul class="list">
+        <li>Ownership confirmed via secure DNS tokens (no passwords).</li>
+        <li>HTTPS-based verification where supported.</li>
+        <li>Automatic warnings for invalid or risky DNS configurations.</li>
+        <li>Propagation tracked securely without storing registrar credentials.</li>
+      </ul>
+    </section>
+
+    <!-- 6. Infra -->
+    <section class="card" id="infra">
+      <h2>🧱 Secure Infrastructure</h2>
+      <p>Hosted on hardened cloud infrastructure with encrypted SSD storage, daily backups, DDoS protection, firewalling, and 99.9% uptime SLA. We conduct internal security reviews every 90 days.</p>
+    </section>
+
+    <!-- 7. Frontend protections -->
+    <section class="card" id="frontend">
+      <h2>🧰 Front-End Security Controls</h2>
+      <div class="grid grid-2">
+        <div>
+          <p><strong>Content Security Policy (CSP)</strong> prevents malicious scripts from loading.</p>
+          <p class="muted"><code>Content-Security-Policy: default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;</code></p>
+        </div>
+        <div>
+          <p><strong>CORS</strong> restricted to our domains only, <code>*</code> is never used in production.</p>
+          <p><strong>Input Sanitation</strong> on all forms, plus bot protection (reCAPTCHA/hCaptcha) to block spam.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. User responsibilities -->
+    <section class="card" id="user">
+      <h2>🧍 Your Role in Security</h2>
+      <ul class="list">
+        <li>Use unique, strong passwords for your registrar and email.</li>
+        <li>Enable two-factor authentication (2FA) wherever possible.</li>
+        <li>Avoid connecting domains on shared or public Wi-Fi.</li>
+      </ul>
+    </section>
+
+    <!-- 9. Monitoring -->
+    <section class="card" id="monitoring">
+      <h2>🔄 Monitoring &amp; Incident Response</h2>
+      <p>We monitor for unusual activity (failed logins, anomalous API usage, DNS errors). To report a vulnerability or concern, email us at <a href="mailto:security@domainconnecthub.com">security@domainconnecthub.com</a>. We respond to verified reports within <strong>48 hours</strong>.</p>
+    </section>
+
+    <!-- 10. Commitment -->
+    <section class="card" id="commitment">
+      <h2>✅ Our Ongoing Commitment</h2>
+      <p>Security is continuous. We patch dependencies, review configurations, and follow evolving best practices in web app and DNS automation security.</p>
+      <div class="callout"><strong>Promise:</strong> “DomainConnectHub will always be simple for users — and secure at its core.”</div>
+    </section>
+
+    <!-- Summary table -->
+    <section class="card" id="summary">
+      <h2>⚡ Summary of Security Features</h2>
+      <table class="table" role="table" aria-label="Security features summary">
+        <thead>
+          <tr><th>Area</th><th>Protection</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>SSL Encryption</td><td>HTTPS (TLS 1.3)</td><td>✅ Enabled</td></tr>
+          <tr><td>API Key Storage</td><td>Encrypted env vars</td><td>✅ Secure</td></tr>
+          <tr><td>Privacy</td><td>GDPR / CCPA</td><td>✅ Compliant</td></tr>
+          <tr><td>DNS Validation</td><td>Token + HTTPS</td><td>✅ Automatic</td></tr>
+          <tr><td>Form Protection</td><td>Sanitization + CAPTCHA</td><td>✅ Active</td></tr>
+          <tr><td>Server Security</td><td>DDoS + Firewall + Backups</td><td>✅ Enabled</td></tr>
+          <tr><td>Vulnerability Scans</td><td>Quarterly reviews</td><td>✅ Scheduled</td></tr>
+          <tr><td>Reporting</td><td>security@domainconnecthub.com</td><td>✅ Open</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <p><a class="cta" href="/">← Back to Home</a></p>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p><strong>DomainConnectHub</strong> — Simplifying domain connections with security at the core.</p>
+      <p class="muted">© <span id="year"></span> DomainConnectHub</p>
+    </div>
+  </footer>
+
+  <script>
+    // year stamp
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
